@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:            Site Title
+title:            "@iffyio"
 locale:           en_US
-url:
+url:              http://localhost:4000
 
 
 # Jekyll configuration
@@ -26,13 +26,13 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
+  name: Ifeanyi Ubah
   avatar: bio-photo.jpg
-  bio: "Describe your self."
+  bio: "<strong style='color:#DF3F3F;font-size:1.5em;'>Yo</strong>! I'm currently a master's student studying Software engineering at KTH."
   email:
   disqus-shortname:
-  twitter: #username
-  facebook: #username
+  twitter: iffyio
+  facebook: iffyio
   google:
     plus: #username
     analytics:
@@ -40,7 +40,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: iffyio
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username

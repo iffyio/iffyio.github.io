@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About the Theme
-tags: [about, Jekyll, theme, responsive]
+tags: [about, Ifeanyi, Ubah, blog]
 modified: 2014-08-08T20:53:07.573882-04:00
 comments: true
 image:
