@@ -1,9 +1,9 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
-imasge:
-  feature: sample-image-1.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+excerpt: "The personal blog of Ifeanyi Ubah."
+tags: [blog, ifeanyi ubah, website, iffyio]
+imawge:
+  feature: stockholm.jpg
+  credit: Eva Garmendia
+  creditlink: https://www.flickr.com/photos/evage/4942331493/
 ---
