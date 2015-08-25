@@ -27,14 +27,14 @@ kramdown:
 # Site owner
 owner:
   name: Ifeanyi Ubah
-  avatar: bio-photo.jpg
+  avatar: me.png #bio-photo.jpg
   bio: "<strong style='color:#DF3F3F;font-size:1.5em;'>Yo</strong>! I'm currently a master's student studying Software engineering at KTH."
   email:
   disqus-shortname:
-  twitter: iffyio
-  facebook: iffyio
+  twitter: #iffyio
+  facebook: #iffyio
   google:
-    plus: #username
+    plus: 117300663075756830547 #ifeanyiub
     analytics:
     verify:
     ad-client:
