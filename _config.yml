@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            "@iffyio"
+title:            "(◕◡◕)_ifeanyiu"
 locale:           en_US
 url:              http://localhost:4000
 
@@ -27,7 +27,7 @@ kramdown:
 # Site owner
 owner:
   name: Ifeanyi Ubah
-  avatar: me.png #bio-photo.jpg
+  avatar: me.jpg #bio-photo.jpg
   bio: "<strong style='color:#DF3F3F;font-size:1.5em;'>Yo</strong>! I'm currently a master's student studying Software engineering at KTH."
   email:
   disqus-shortname:
