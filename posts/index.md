@@ -7,7 +7,7 @@ search_omit: true
 ---
 
 <ul class="post-list">
-{% for post in site.categories.blog %}
+{% for post in site.categories.posts %}
   {% capture currentyear %}{{post.date | date: "%B %Y"}}{% endcapture %}
   {% if currentyear != year %}
     {% unless forloop.first %}</ul>{% endunless %}
