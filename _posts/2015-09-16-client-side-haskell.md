@@ -4,6 +4,8 @@ title: Client-side haskell
 categories: posts
 excerpt: "Hands on tutorial on using haskell to create client-side applications"
 tags: [haskell, haste, tutorial, functional programming]
+comments: true
+share: true
 image:
   feature: pong.jpg
   credit: ...storrao...
