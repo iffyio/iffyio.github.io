@@ -220,7 +220,7 @@ onEvent canvasElem OnMouseMove $ \mousePos -> do
 
 Remember that thing about Haskell being a purely functional language? Whoever said that didn't finish the entire story it seems. Variables **are immutable** in Haskell but there are a few ways to create references whereby we can change what the reference points to.  
 
-We won't be able to do a lot without interacting with the real world now that we need to process mouse events from the user, so we use the [IORef monad](https://hackage.haskell.org/package/base-4.8.1.0/docs/Data-IORef.html){:target="_blank"} to do the job. This is the first sighting of mutation in our code but don't be alarmed if you haven't seen this before. The `Data.IORef` makes it quite easy and safe to do this.  
+We won't be able to do a lot without interacting with the real world now that we need to process mouse events from the user, so we use the [IORef data type](https://hackage.haskell.org/package/base-4.8.1.0/docs/Data-IORef.html){:target="_blank"} to do the job. This is the first sighting of mutation in our code but don't be alarmed if you haven't seen this before. `Data.IORef` makes it quite easy and safe to do this.  
 The first statement creates a reference object of type `IORef GameState` using the `newIORef` function. This creates a new `GameState` reference with our initialState, allowing us to modify its contents throughout our code.  
 The second statement adds a mousemove event to the canvas element. The `onEvent` function provided by Haste takes an `Elem`  and an `Event` while `Event` constructor take as arguments a callback function à la Javascript. Our callback function `\mousePos -> do movePaddles mousePos stateRef` receives the mouse position `mousePos` and moves the paddles whenever the mousemove event fires.  
 Here is the code to move our paddles.
@@ -250,7 +250,7 @@ animate canvas stateRef = do
 
 
  `animate` updates that state with the update function, writes the updated state back to the state variable then waits 30 milliseconds before repeating the whole process so it runs in a loop.
- Later on we'll add a few more functions used to compose the update function but for now it consists only of the `moveBall`. `atomicWriteIORef` is similar to `atomicModifyIORef` but overwrites the variable with a new state. This feels more efficient here since we can extract our pure state, pass it around various functions composed by the update function and then, only once do we need to commit the sinful act of changing the value referenced by our `IORef` monad  &#128519;.  
+ Later on we'll add a few more functions used to compose the update function but for now it consists only of the `moveBall`. `atomicWriteIORef` is similar to `atomicModifyIORef` but overwrites the variable with a new state. This feels more efficient here since we can extract our pure state, pass it around various functions composed by the update function and then, only once do we need to commit the sinful act of changing the value referenced by our `IORef` variable  &#128519;.  
 
 Now add the following as the last line of our main function
 `animate canvas stateRef`  
