@@ -125,7 +125,7 @@ For our ball and paddles, we use a familiar technique of abstracting the creatio
 
 {% highlight haskell %}
 ball :: Point -> Picture ()
-ball pt = color (RGB 255 255 255) $ do
+ball pt = white $ do
   fill $ circle pt ballRadius
 
 paddle :: Rect -> Picture () 
