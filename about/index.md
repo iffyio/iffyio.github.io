@@ -15,7 +15,7 @@ I'm Ifeanyi. Nothing fascinates me more than computers. Okay except maybe the hu
 I'm currently a Software Engineering Master's student with a focus on Distributed Systems at KTH but when i'm not wrestling with school work, I like to try out new programming languages/paradigms and make stuff on the side with them.  
 Beyond that I watch documentaries, animated series *#bringbackfuturama* and way too much MMA.  
   
-  Say Hi back using ifeanyiub#gmail.com or using of the links down there.  
+  Say Hi back using ifeanyiub#gmail.com or any of the links down there.  
 
 Also, Thanks for stopping by 😊.
 
