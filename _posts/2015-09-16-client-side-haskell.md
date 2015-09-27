@@ -230,7 +230,6 @@ Here is the code to move our paddles.
 {% highlight haskell %}
 movePaddles :: (Int, Int) -> IORef GameState -> IO ()
 movePaddles (mouseX, mouseY) stateRef = do
-  state <- readIORef stateRef
   atomicModifyIORef stateRef (\state -> ((state {paddlePos = (fromIntegral mouseX) - (paddleWidth / 2)}), ()))
 {% endhighlight %}
 
