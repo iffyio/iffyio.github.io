@@ -20,7 +20,7 @@ As for how we can use it to program applications for the web, there are some rea
 
 This will be a hands on tutorial on how to use [Haste](http://haste-lang.org){:target="_blank"}, a Haskell to Javascript compiler that allows you to write Haskell code that can be executed on the web. We will be creating a simple pong game while exploring some of the features of the Haste environment. You can check the game out [over here](/demo/pong.html){:target="_blank"}.  
 
->This tutorial assumes that you have basic knowledge of haskell or some other functional programming language.  It also uses [version 0.4](https://hackage.haskell.org/package/haste-compiler-0.4){:target="_blank"} of the Haste compiler so you should choose to install this version if you plan to try out the code along. You could also port the code if you choose to try it on [versions 0.5](https://hackage.haskell.org/package/haste-compiler-0.5.0){:target="_blank"} and above.  
+>This tutorial assumes that you have basic knowledge of haskell or some other functional programming language.  It also uses [version 0.4](https://hackage.haskell.org/package/haste-compiler-0.4){:target="_blank"} of the Haste compiler so you should choose to install this version if you plan to try out the code along. Or you may want to follow [this code instead](https://github.com/iffyio/pong.hs/tree/haste-compiler-0.5.4){:target="_blank"} ported for [version 0.5](https://hackage.haskell.org/package/haste-compiler-0.5.0){:target="_blank"}.  
 
 [Install Haste](http://haste-lang.org/downloads/) on your machine to get started. It requires [GHC](https://www.haskell.org/ghc/){:target="_blank"}, the Glasgow Haskell Compiler so you want to install that first if you don't have it already. 
 
