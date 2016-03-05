@@ -35,7 +35,7 @@ This will be a hands on tutorial on how to use [Haste](http://haste-lang.org){:t
 
 That aside, let's begin our pong game.
 
-#Rules of the game
+# Rules of the game
 There are two paddles and one ball.  
 When the ball hits any of the walls (right, left) or paddles, it should change its direction.  
 When a ball hits the ceiling or floor, the game should end.  
