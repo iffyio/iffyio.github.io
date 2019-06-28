@@ -109,7 +109,7 @@ So the redis process is exactly like everyone else from a networking perspective
 Networking isn't special here,`docker run` let's you do this customization
 for most namespaces.
 This begs the question of what even is a container?
-Is a process that shares all but one namespace still a container? ¯\\_(ツ)_/¯
+Is a process that shares all but one namespace still a container? ¯\\\_(ツ)_/¯
 \\
 Usually containers come with the notion of **isolation**, achieved through namespaces - the smaller the number of namespaces and resources that a process shares, the more isolated the process is and that's all that really matters.
 
