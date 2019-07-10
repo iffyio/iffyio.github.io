@@ -40,7 +40,7 @@ Absolutely nothi... just kidding. One good thing with boxes is that you can add 
 That's the same idea here with namespaces - a process `P` can go crazy and `sudo rm -rf /` but another process `Q` that belongs to a different `Mount` namespace will be unaffected since they're using distinct copies of those files.
 
 Note though that a resource encapsulated within a namespace doesn't necessarily mean that it's a unique copy.
-In a number of cases, either by design or as a security hole, two or more namespaces will contain the same copy, e.g of the same file, so that changes made to that file in one `Mount` namespace will in fact be visible in all other `Mount` namespaces that also references it.
+In a number of cases, either by design or as a security hole, two or more namespaces will contain the same copy, e.g of the same file, so that changes made to that file in one `Mount` namespace will in fact be visible in all other `Mount` namespaces that also reference it.
 For this reason, we will retire our box analogy here since an item cannot
 simultaneously exist in two distinct boxes 😞.
 
@@ -61,7 +61,7 @@ lrwxrwxrwx 1 iffy iffy 0 May 18 12:53 user -> user:[4026531837]
 lrwxrwxrwx 1 iffy iffy 0 May 18 12:53 uts -> uts:[4026531838]
 {% endhighlight %}
 
-You can open a second terminal and run the same command and it should give you the exact same output - this is because, as we mentioned earlier, a process must belong some namespace and unless we explicitly
+You can open a second terminal and run the same command and it should give you the exact same output - this is because, as we mentioned earlier, a process must belong to some namespace and unless we explicitly
 specify which ones, Linux adds it as a member to the default namespaces.
 \\
 \\
@@ -117,7 +117,7 @@ Usually containers come with the notion of **isolation**, achieved through names
 
 In the remainder of this post, we will lay the ground work for our
 program that we will call `isolate`.
-`isolate` takes a command as arguments and runs that command in a new process isolated from the rest of the system and within it's very own namespaces.
+`isolate` takes a command as arguments and runs that command in a new process isolated from the rest of the system and within its very own namespaces.
 In the coming posts, we will look at adding support for individual
 namespaces when `isolate` spins up the command process.
 
@@ -142,10 +142,11 @@ After this we will already have an idea of what we want to accomplish and will t
 
 ## Implementation ######
 
-The source code for this post [can be found here](https://github.com/iffyio/isolate/tree/part-1){:target="_blank"}.
+> The source code for this post [can be found here](https://github.com/iffyio/isolate/tree/part-1){:target="_blank"}.
+
 Our `isolate` implementation will initially be a simple program that reads
 a command path from stdin and clones a new process that executes the command with the specified arguments.
-The cloned command process will run in it's own `UTS` namespace
+The cloned command process will run in its own `UTS` namespace
 just like we did with `unshare` earlier.
 In later posts, we will see that namespaces do not necessarily work (or even provide isolation) out of the box and we will need to do some setup after creating them (but before executing the actual command) in order for the command to truly run in isolation.
 
@@ -204,7 +205,7 @@ int main(int argc, char **argv)
 {% endhighlight %}
 
 Check out `clone_flags` that we pass to our `clone` invocation,
-See how dead simple it is to create a new process in it's own namespace?
+See how dead simple it is to create a new process in its own namespace?
 All we have to do is set the flag for the namespace type
 (the `CLONE_NEWUTS` flag corresponds to the `UTS` namespace) and Linux
 takes care of the rest.
@@ -252,7 +253,7 @@ coke
 
 Currently, `isolate` is a little bit more than a program that
 just forks off a command (we do have the `UTS` thing going for us).
-In the next post, we take it a step further by looking at `User`
-namespaces and have `isolate` run the command in it's own `User` namespace.
+In the [next post]({{ site.baseurl }}{% post_url 2019-07-10-linux-namespaces-part-2 %}){:target="_blank"}, we take it a step further by looking at `User`
+namespaces and have `isolate` run the command in its own `User` namespace.
 There, we will see that we actually need to do some work in order to
 have a usable namespace in which the command can run.
