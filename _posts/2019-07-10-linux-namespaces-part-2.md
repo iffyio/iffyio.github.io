@@ -299,4 +299,4 @@ $ id
 uid=0(root) gid=0(root)
 {% endhighlight %}
 
-This post went into quite a lot of detail about how `User` namespaces work but in the end, setting up an instance was relatively painless. In the next post, we will be looking at having `isolate` run the command in its own `Mount` namespace (uncovering the mystery behind the `Dockerfile` `FROM` [instruction](https://docs.docker.com/engine/reference/builder/#from){:target="_blank"}). There, we will be required to give Linux a bit more help in order to set up an instance properly.
+This post went into quite a lot of detail about how `User` namespaces work but in the end, setting up an instance was relatively painless. In the [next post]({{ site.baseurl }}{% post_url 2019-07-18-linux-namespaces-part-3 %}), we will be looking at having `isolate` run the command in its own `Mount` namespace (uncovering the mystery behind the `Dockerfile` `FROM` [instruction](https://docs.docker.com/engine/reference/builder/#from){:target="_blank"}). There, we will be required to give Linux a bit more help in order to set up an instance properly.
