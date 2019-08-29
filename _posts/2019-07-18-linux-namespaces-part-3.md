@@ -293,4 +293,4 @@ PID   USER     TIME  COMMAND
 This looks much better! The shell sees itself as the only process running on the system and running as PID 1 (since it was the first process to start in this new PID namespace).
 \\
 \\
-This post covered two namespaces and `isolate` racked up two new features as a result. In the next post, we will be looking at isolation via `Network` namespaces. There, we will have to deal with some intricate, low-level network configuration in an attempt to enable network communication between processes in different network namespaces.
+This post covered two namespaces and `isolate` racked up two new features as a result. In the [next post]({{ site.baseurl }}{% post_url 2019-08-29-linux-namespaces-part-4 %}), we will be looking at isolation via `Network` namespaces. There, we will have to deal with some intricate, low-level network configuration in an attempt to enable network communication between processes in different network namespaces.
