@@ -110,7 +110,7 @@ P$ echo $$
 # In a new user namespace...
 C$ echo $$
 1409
-# C has no mappings to it's parent since it is new
+# C has no mappings to its parent since it is new
 C$ cat /proc/1409/uid_map
 # Empty
 # While root namespace P has dummy mappings for all
@@ -119,7 +119,7 @@ P$ cat /proc/1442/uid_map
          0          0 4294967295
 # UIDs 0 through 4294967294 in P is mapped
 # to 4294967295 - the special no user ID - in C.
-C$ cat /proc/1409/uid_map
+C$ cat /proc/1422/uid_map
          0 4294967295 4294967295
 {% endhighlight %}
 
